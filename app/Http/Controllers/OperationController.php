@@ -18,7 +18,7 @@ class OperationController extends Controller
 
     public function create(Request $request) {
         $this->validate($request, [
-            'name' => 'required',
+            'name' => 'required|string',
             'amount' => 'required|numeric',
             'userId' => 'required|integer'
         ]);
