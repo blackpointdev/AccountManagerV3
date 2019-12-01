@@ -25,4 +25,8 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     $router->delete('operations/{id}', ['uses' => 'OperationController@delete']);
 
     $router->put('operations/{id}', ['uses' => 'OperationController@update']);
+
+    $router->get('clients', ['uses' => 'ClientController@showAllClients']);
+
+    $router->get('clients/{id}/operations', ['uses' => 'ClientController@showAllOperations']);
 });

@@ -13,10 +13,16 @@ class OperationController extends Controller
     }
 
     public function showOneOperation($id) {
-        return response()->json(Operation::find($id));
+        return response()->json(Operation::findOrFail($id));
     }
 
     public function create(Request $request) {
+        $this->validate($request, [
+            'name' => 'required',
+            'amount' => 'required|numeric',
+            'userId' => 'required|integer'
+        ]);
+
         $operation = Operation::create($request->all());
 
         return response()->json($operation, 201);
