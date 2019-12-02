@@ -16,6 +16,7 @@ return [
             'prefix' => '',
             'schema' => 'public',
             'sslmode' => 'prefer',
+            'migrations' => 'migrations'
         ]
 
     ]
