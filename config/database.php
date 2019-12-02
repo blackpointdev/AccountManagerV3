@@ -3,7 +3,7 @@
 return [
 
     'default' => env('DB_CONNECTION', 'pgsql'),
-
+    'migrations' => 'migrations',
     'connections' => [
         'pgsql' => [
             'driver' => 'pgsql',
@@ -16,7 +16,6 @@ return [
             'prefix' => '',
             'schema' => 'public',
             'sslmode' => 'prefer',
-            'migrations' => 'migrations'
         ]
 
     ]
